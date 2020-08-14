@@ -282,7 +282,7 @@ class Parser:
         if source and os.path.isfile(source):
             with open(source) as file_:
                 return yaml.safe_load(file_)
-        return yaml.load(source)
+        return yaml.safe_load(source)
 
     @staticmethod
     def _find_type(module, name):
