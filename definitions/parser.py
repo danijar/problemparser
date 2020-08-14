@@ -2,8 +2,8 @@ import os
 import sys
 import inspect
 import yaml
-from definitions.error import DefinitionError, SchemaError
-from definitions.attrdict import AttrDict, DefaultAttrDict
+#from definitions.error import DefinitionError, SchemaError
+#from definitions.attrdict import AttrDict, DefaultAttrDict
 
 
 class Candidate:
@@ -281,7 +281,7 @@ class Parser:
         """Load a YAML file or string."""
         if source and os.path.isfile(source):
             with open(source) as file_:
-                return yaml.load(file_)
+                return yaml.safe_load(file_)
         return yaml.load(source)
 
     @staticmethod
