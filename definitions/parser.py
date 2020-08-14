@@ -2,8 +2,8 @@ import os
 import sys
 import inspect
 import yaml
-#from definitions.error import DefinitionError, SchemaError
-#from definitions.attrdict import AttrDict, DefaultAttrDict
+from definitions.error import DefinitionError, SchemaError
+from definitions.attrdict import AttrDict, DefaultAttrDict
 
 
 class Candidate:
